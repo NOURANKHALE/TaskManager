@@ -8,7 +8,7 @@ import {DropdownMenu,DropdownMenuTrigger,DropdownMenuContent,} from "@/component
 import { CalendarIcon, Flag, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from "@/components/ui/select";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 import { useEditTask } from "@/Hooks/useEditTask";
 import { format } from "date-fns";
 

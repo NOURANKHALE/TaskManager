@@ -1,4 +1,4 @@
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 // Fuzzy search implementation using Levenshtein distance
 export function fuzzySearch(text: string, pattern: string): boolean {

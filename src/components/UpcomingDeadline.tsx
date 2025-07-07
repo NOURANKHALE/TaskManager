@@ -1,5 +1,5 @@
 import { Calendar } from "lucide-react";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 interface UpcomingDeadlinesCardProps {
   Tasks: Task[];

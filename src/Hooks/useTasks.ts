@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 import { useTaskSearchs } from "./useTaskSearch";
 
 export function useTasks() {

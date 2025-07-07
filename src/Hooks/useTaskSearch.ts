@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef, useMemo, useEffect } from "react";
-import Task from "@/types/Task";
-import { Search } from "@/types/SearchProp";
+import Task from "@/types/TaskInterface";
+import { Search } from "@/types/SearchPropInterface";
 
 const INITIAL_SEARCH: Search = {
   search: "",
@@ -103,13 +103,18 @@ export function useTaskSearchs(tasks: Task[]) {
       const taskText = (task.text || "").toLowerCase();
       const matchesSearch = !searchText || taskText.includes(searchText);
 
-      const matchesPriority = !filters.priority || task.priority === filters.priority;
-      const matchesCategory = !filters.category || task.category === filters.category;
-      const matchesStatus = !filters.status || 
+      const matchesPriority =
+        !filters.priority || task.priority === filters.priority;
+      const matchesCategory =
+        !filters.category || task.category === filters.category;
+      const matchesStatus =
+        !filters.status ||
         (filters.status === "completed" && task.completed) ||
         (filters.status === "pending" && !task.completed);
 
-      return matchesSearch && matchesPriority && matchesCategory && matchesStatus;
+      return (
+        matchesSearch && matchesPriority && matchesCategory && matchesStatus
+      );
     });
   }, [tasks, filters]);
 
@@ -119,7 +124,10 @@ export function useTaskSearchs(tasks: Task[]) {
   );
 
   const progress = useMemo(
-    () => (filteredTasks.length ? Math.round((completedCount / filteredTasks.length) * 100) : 0),
+    () =>
+      filteredTasks.length
+        ? Math.round((completedCount / filteredTasks.length) * 100)
+        : 0,
     [filteredTasks, completedCount]
   );
 
@@ -139,11 +147,12 @@ export function useTaskSearchs(tasks: Task[]) {
     const groups = filteredTasks.reduce<GroupedTasks>((acc, task) => {
       if (!task) return acc;
 
-      const date = task.dueDate instanceof Date
-        ? task.dueDate.toLocaleDateString()
-        : typeof task.dueDate === "string"
-        ? new Date(task.dueDate).toLocaleDateString()
-        : "No Due Date";
+      const date =
+        task.dueDate instanceof Date
+          ? task.dueDate.toLocaleDateString()
+          : typeof task.dueDate === "string"
+          ? new Date(task.dueDate).toLocaleDateString()
+          : "No Due Date";
 
       if (!acc[date]) {
         acc[date] = [];

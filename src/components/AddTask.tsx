@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from "@/components/ui/select";
 import { motion } from "framer-motion";
 import { useAddTask } from "@/Hooks/useAddTask"; 
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 export interface AddTaskProps {
   onAdd: (Task: Omit<Task, "id" | "completed">) => void;

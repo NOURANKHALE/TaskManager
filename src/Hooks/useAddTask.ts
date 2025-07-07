@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { format } from "date-fns";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 export function useAddTask(onAdd: (Task: Omit<Task, "id" | "completed">) => void) {
   const [text, setText] = useState("");

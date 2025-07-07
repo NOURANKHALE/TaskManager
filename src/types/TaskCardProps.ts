@@ -1,4 +1,4 @@
-import Task from '@/types/Task';
+import Task from '@/types/TaskInterface';
 export default interface TaskCardProps {
   Task: Task;
   Tasks?: Task[];

@@ -1,4 +1,4 @@
-import Task from '@/types/Task';
+import Task from '@/types/TaskInterface';
 export default interface TaskListProps {
   Tasks?: Task[];
   onDelete: (id: string) => void;

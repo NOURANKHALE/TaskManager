@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 export function useEditTask(task: Task, onUpdate: (id: string, updatedTask: Partial<Task>) => void) {
   const [isOpen, setIsOpen] = useState(false);

@@ -2,21 +2,22 @@ import { Search, X, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useTaskSearch } from "@/Hooks/useTaskSearch";
-import { TaskSearchProps} from "@/types/SearchProp";
+import { TaskSearchProps } from "@/types/SearchPropInterface";
 
-export function TaskSearch({ 
-  onSearchChange = () => {}, 
+export function TaskSearch({
+  onSearchChange = () => {},
   hasResults = true,
-  isLoading = false 
+  isLoading = false,
 }: TaskSearchProps) {
-  const {searchInput,handleInputChange,clearSearch,hasSearch} = useTaskSearch(onSearchChange);
+  const { searchInput, handleInputChange, clearSearch, hasSearch } =
+    useTaskSearch(onSearchChange);
 
   return (
     <div className="Task_Search space-y-4 w-full">
       <div className="flex flex-col sm:flex-row items-center gap-3 w-full">
         <div className="relative w-full sm:flex-1 group">
-          <Search 
-            className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-violet-500 dark:text-violet-400 w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:scale-110 group-focus-within:scale-110" 
+          <Search
+            className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-violet-500 dark:text-violet-400 w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:scale-110 group-focus-within:scale-110"
             aria-hidden="true"
           />
           <Input
@@ -28,8 +29,8 @@ export function TaskSearch({
             disabled={isLoading}
           />
           {isLoading && (
-            <Loader2 
-              className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-violet-500 dark:text-violet-400 w-5 h-5 sm:w-6 sm:h-6 animate-spin" 
+            <Loader2
+              className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 text-violet-500 dark:text-violet-400 w-5 h-5 sm:w-6 sm:h-6 animate-spin"
               aria-hidden="true"
             />
           )}

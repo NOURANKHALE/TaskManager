@@ -1,5 +1,5 @@
 import { Badge } from "./ui/badge";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 export const TaskListHeader = ({ totalTasks, completedTasks }: Task) => {
   return (

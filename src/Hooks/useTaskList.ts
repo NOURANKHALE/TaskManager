@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { arrayMove } from "@dnd-kit/sortable";
 import { DragEndEvent } from "@dnd-kit/core";
 import { useTaskSearchs } from "./useTaskSearch";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 export const useTaskList = (tasks: Task[]) => {
   const [expandedSections, setExpandedSections] = useState<{ [key: string]: boolean }>({});

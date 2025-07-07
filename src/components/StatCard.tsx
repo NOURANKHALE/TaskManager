@@ -3,7 +3,7 @@ import { CSS } from "@dnd-kit/utilities";
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
 import { cn } from "@/lib/utils";
-import StatCardProps from "@/types/StatCardProps";
+import StatCardProps from "@/types/StatCardPropsInterface";
 
 export const StatCard = ({id,title,value,gradient,borderColor,textColor,badgeColor,children,}: StatCardProps) => {
   const {attributes,listeners,setNodeRef,transform,transition,isDragging,} = useSortable({ id });

@@ -11,7 +11,7 @@ import { TaskTimeline } from "./TaskTimeline";
 import { TaskListHeader } from "./TaskListHeader";
 import {DndContext,KeyboardSensor,PointerSensor,useSensor,useSensors,closestCenter,} from "@dnd-kit/core";
 import {SortableContext,rectSortingStrategy,sortableKeyboardCoordinates,} from "@dnd-kit/sortable";
-import TaskListProps  from "@/types/TaskListProp";
+import TaskListProps  from "@/types/TaskListPropInterface";
 import { useTaskList } from "@/Hooks/useTaskList";
 import dynamic from 'next/dynamic';
 

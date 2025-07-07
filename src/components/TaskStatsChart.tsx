@@ -2,7 +2,7 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Clock } from 'lucide-react';
-import Task from '@/types/Task';
+import Task from '@/types/TaskInterface';
 
 const TaskStatsChart = ({ completedTasks, pendingTasks }: Task) => {
   const data = [

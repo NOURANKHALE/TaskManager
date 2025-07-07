@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { format } from "date-fns";
 import { ChevronDown, ClipboardList } from "lucide-react";
 import { TaskCard } from "./TaskCard";
-import Task from "@/types/Task";
+import Task from "@/types/TaskInterface";
 
 interface TaskTimelineProps {
   groupedTasks: { [key: string]: Task[] };

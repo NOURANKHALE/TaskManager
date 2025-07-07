@@ -3,7 +3,7 @@ import { ModeToggle } from "@/components/ModeToggle";
 import { AddTask } from "@/components/AddTask";
 import { useTasks } from "@/Hooks/useTasks";
 import { TaskLists } from "@/components/TaskLists";
-import  Task  from "@/types/Task";
+import  Task  from "@/types/TaskInterface";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
