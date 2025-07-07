@@ -61,7 +61,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to use the a
 |--------------|---------------------|
 | Framework    | [Next.js](https://nextjs.org/) |
 | Language     | [TypeScript](https://www.typescriptlang.org/) |
-| UI           | [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/), [Radix UI](https://www.radix-ui.com/) |
+| UI           | [React](https://react.dev/), [Tailwind CSS](https://tailwindcss.com/)
 | State/Anim.  | [framer-motion](https://www.framer.com/motion/), [dnd-kit](https://dndkit.com/) |
 | Charts       | [Recharts](https://recharts.org/) |
 | Icons        | [Lucide](https://lucide.dev/) |
